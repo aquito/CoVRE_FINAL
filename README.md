@@ -1,1 +1,2 @@
-# CoVRE_FINAL
+# CoVRE_v2
+ Collab VR escape room
