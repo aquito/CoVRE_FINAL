@@ -14,7 +14,9 @@ public class PedestalManager : MonoBehaviour
     [SerializeField]
     private GameObject greenPedestal;
 
-    
+    [SerializeField]
+    private GameObject greenTransparentPedestal;
+
     //[SerializeField]
     //private Material greenPedestalActiveMaterial;
 
@@ -24,6 +26,9 @@ public class PedestalManager : MonoBehaviour
     [SerializeField]
     private GameObject redPedestal;
 
+    [SerializeField]
+    private GameObject redTransparentPedestal;
+
     //[SerializeField]
     //private Material redPedestalActiveMaterial;
 
@@ -32,7 +37,10 @@ public class PedestalManager : MonoBehaviour
     [SerializeField]
     private GameObject yellowPedestal;
 
-   // [SerializeField]
+    [SerializeField]
+    private GameObject yellowTransparentPedestal;
+
+    // [SerializeField]
     //private Material yellowPedestalActiveMaterial;
 
     //private Material yellowPedestalDefaultMaterial;
@@ -91,20 +99,39 @@ public class PedestalManager : MonoBehaviour
 
     private void Update()
     {
-       // as is, these booleans monitor the states of the spheres however this has since moved or is to be moved to 
-       // Puzzle2Manager which maybe should be renamed to 'Puzzle2ActivatorManager' to be more clear
-       
-        /*
-        isGreen01Active = pedestalActivatorGreen01.GetComponent<SwitchActivatorMaterial>().isSwitchActive;
-        isGreen02Active = pedestalActivatorGreen02.GetComponent<SwitchActivatorMaterial>().isSwitchActive;
-        isRed01Active = pedestalActivatorRed01.GetComponent<SwitchActivatorMaterial>().isSwitchActive;
-        isRed02Active = pedestalActivatorRed02.GetComponent<SwitchActivatorMaterial>().isSwitchActive;
-        isYellow01Active = pedestalActivatorYellow01.GetComponent<SwitchActivatorMaterial>().isSwitchActive;
-        isYellow02Active = pedestalActivatorYellow02.GetComponent<SwitchActivatorMaterial>().isSwitchActive;
-        */
-       // the below is monitoring the simultaneous activation of the two same-colure activators
-       // ie if they are both true they give the hint of which pedestal relates to which statue color
-       // (which statue should be brought onto which pedestal)
+        // checking if one activator is being interacted with and therefore showing the transparent pedestal
+        if (isGreen01Active && !isGreen02Active || isGreen02Active && !isGreen01Active)
+        {
+            greenTransparentPedestal.SetActive(true);
+        }
+        else
+        {
+            greenTransparentPedestal.SetActive(false);
+
+        }
+
+        if (isRed01Active && !isRed02Active || isRed02Active && !isRed01Active)
+        {
+           redTransparentPedestal.SetActive(true);
+        }
+        else
+        {
+            redTransparentPedestal.SetActive(false);
+
+        }
+
+        if (isYellow01Active && !isYellow02Active || isYellow02Active && !isYellow01Active)
+        {
+            yellowTransparentPedestal.SetActive(true);
+        }
+        else
+        {
+            yellowTransparentPedestal.SetActive(false);
+
+        }
+        // the below is monitoring the simultaneous activation of the two same-colure activators
+        // ie if they are both true they give the hint of which pedestal relates to which statue color
+        // (which statue should be brought onto which pedestal)
 
         if (isGreen01Active && isGreen02Active)
         {

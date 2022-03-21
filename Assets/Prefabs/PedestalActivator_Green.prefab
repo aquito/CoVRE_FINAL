@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 6483232365513622284}
   - component: {fileID: 6483232365513622286}
   - component: {fileID: 6483232365513622285}
-  - component: {fileID: 6483232365513622769}
   - component: {fileID: 7375614724128541509}
   - component: {fileID: 6705115864714114480}
   - component: {fileID: 1477045925287594864}
@@ -158,18 +157,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6483232365513622769}
-        m_TargetAssemblyTypeName: SwitchColumnMaterial, Assembly-CSharp
-        m_MethodName: Switch
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 7375614724128541509}
         m_TargetAssemblyTypeName: Normal.Realtime.RealtimeView, Normcore
         m_MethodName: RequestOwnership
@@ -188,18 +175,6 @@ MonoBehaviour:
       - m_Target: {fileID: 6483232365513622285}
         m_TargetAssemblyTypeName: SwitchActivatorMaterial, Assembly-CSharp
         m_MethodName: SwitchColorBack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6483232365513622769}
-        m_TargetAssemblyTypeName: SwitchColumnMaterial, Assembly-CSharp
-        m_MethodName: SwitchBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -307,7 +282,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c5d295acc75ee244eaf05b20d9c8e0c3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f5e978e1310c2ee43be2fc3222f78d8f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -407,20 +382,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: b90332b2d11eb984ca58c74178a62cdb, type: 2}
   isSwitchActive: 0
---- !u!114 &6483232365513622769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6483232365513622278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0abc3ed615ede814ab5d16d65da0b465, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  newMaterial: {fileID: 2100000, guid: bc072ca07654e0f40a09e958c7c75fbe, type: 2}
-  statuePedestal: {fileID: 8678640845097795159, guid: 7f7f6dae736abe94ea9db95b16966c58, type: 3}
 --- !u!114 &7375614724128541509
 MonoBehaviour:
   m_ObjectHideFlags: 0

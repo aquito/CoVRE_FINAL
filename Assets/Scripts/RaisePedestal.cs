@@ -15,31 +15,48 @@ public class RaisePedestal : MonoBehaviour
 
     private bool isPedestalGoodToMove;
 
+    private bool isPedestalRaised;
+
     private void Start()
     {
         pedestalTransform = GetComponent<Transform>();
         audioSource = GetComponent<AudioSource>();
         pedestalYlimit = pedestalRaisedPosition.transform.position;
         isPedestalGoodToMove = false;
+        isPedestalRaised = false;
     }
 
     private void Update()
     {
-        if (isPedestalGoodToMove)
+        if (isPedestalGoodToMove && !isPedestalRaised)
         {
             if (pedestalTransform.position.y < pedestalYlimit.y)
             {
                 pedestalTransform.Translate(0, 1f * Time.deltaTime, 0);
+
             }
+            else
+            {
+                isPedestalRaised = true;
+            }
+
+
         }
     }
 
     public void MoveUp()
     {
-        isPedestalGoodToMove = true;
-        audioSource.Play();
+        if (!isPedestalGoodToMove)
+        {
+            audioSource.Play();
+            isPedestalGoodToMove = true;
 
-        Debug.Log("Starting to move" + pedestalTransform.gameObject.name + " door");
+            Debug.Log("Starting to move" + pedestalTransform.gameObject.name + " door");
+
+        }
+
+
+
     }
 
 }

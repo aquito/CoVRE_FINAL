@@ -15,7 +15,7 @@ public class SwitchActivatorMaterial : MonoBehaviour
 
     private Color _originalColor;
 
-    private Color _activeColor;
+    public Color _activeColor;
 
     public bool isSwitchActive;
 
@@ -30,7 +30,7 @@ public class SwitchActivatorMaterial : MonoBehaviour
         originalMaterial = GetComponent<MeshRenderer>().material; // storing the existing material
         audioSource = GetComponent<AudioSource>();
         isSwitchActive = false;
-        _activeColor = Color.green;
+        //_activeColor = Color.green;
         _originalColor = GetComponent<MeshRenderer>().material.color;
     }
         
@@ -61,13 +61,17 @@ public class SwitchActivatorMaterial : MonoBehaviour
     public void SwitchColor()
     {
         if(GetComponent<MeshRenderer>().material.color != _activeColor)
-        _pedestalActivatorSync.SetColor(_activeColor);
+            _pedestalActivatorSync.SetColor(_activeColor);
+            isSwitchActive = true;
+            audioSource.Play();
     }
 
     public void SwitchColorBack()
     {
         if (GetComponent<MeshRenderer>().material.color != _originalColor)
             _pedestalActivatorSync.SetColor(_originalColor);
+            isSwitchActive = false;
+            audioSource.Stop();
     }
 
 }

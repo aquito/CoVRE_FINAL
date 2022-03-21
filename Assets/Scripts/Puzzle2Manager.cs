@@ -8,12 +8,28 @@ public class Puzzle2Manager : MonoBehaviour
     public Realtime _realtime; // Wire this up in the Unity Editor
 
     [SerializeField]
-    GameObject greenActivator;
+    GameObject greenActivator; // the sphere prefabs
 
     [SerializeField]
-    Transform greenActivator01Slot;
+    GameObject redActivator;
+
+    [SerializeField]
+    GameObject yellowActivator;
+
+    [SerializeField]
+    Transform greenActivator01Slot; // where the prefabs will be instantiated in floor 2
     [SerializeField]
     Transform greenActivator02Slot;
+
+    [SerializeField]
+    Transform redActivator01Slot;
+    [SerializeField]
+    Transform redActivator02Slot;
+
+    [SerializeField]
+    Transform yellowActivator01Slot;
+    [SerializeField]
+    Transform yellowActivator02Slot;
 
     [SerializeField]
     PedestalManager pedestalManager;
@@ -46,6 +62,22 @@ public class Puzzle2Manager : MonoBehaviour
         green02.transform.Translate(greenActivator02Slot.position);
         green02.transform.SetParent(greenActivator02Slot);
 
+        red01 = Realtime.Instantiate(redActivator.name);
+        red01.transform.Translate(redActivator01Slot.position);
+        red01.transform.SetParent(redActivator01Slot);
+
+        red02 = Realtime.Instantiate(redActivator.name);
+        red02.transform.Translate(redActivator02Slot.position);
+        red02.transform.SetParent(redActivator02Slot);
+
+        yellow01 = Realtime.Instantiate(yellowActivator.name);
+        yellow01.transform.Translate(yellowActivator01Slot.position);
+        yellow01.transform.SetParent(yellowActivator01Slot);
+
+        yellow02 = Realtime.Instantiate(yellowActivator.name);
+        yellow02.transform.Translate(yellowActivator02Slot.position);
+        yellow02.transform.SetParent(yellowActivator02Slot);
+
     }
 
     // Update is called once per frame
@@ -65,6 +97,38 @@ public class Puzzle2Manager : MonoBehaviour
             if (green02.GetComponent<SwitchActivatorMaterial>().isSwitchActive)
             {
                 pedestalManager.GetComponent<PedestalManager>().isGreen02Active = true;
+
+            }
+
+        }
+
+        if (red01 != null && red02 != null)
+        {
+            if (red01.GetComponent<SwitchActivatorMaterial>().isSwitchActive)
+            {
+                pedestalManager.GetComponent<PedestalManager>().isRed01Active = true;
+
+            }
+
+            if (red02.GetComponent<SwitchActivatorMaterial>().isSwitchActive)
+            {
+                pedestalManager.GetComponent<PedestalManager>().isRed02Active = true;
+
+            }
+
+        }
+
+        if (yellow01 != null && yellow02 != null)
+        {
+            if (yellow01.GetComponent<SwitchActivatorMaterial>().isSwitchActive)
+            {
+                pedestalManager.GetComponent<PedestalManager>().isYellow02Active = true;
+
+            }
+
+            if (yellow02.GetComponent<SwitchActivatorMaterial>().isSwitchActive)
+            {
+                pedestalManager.GetComponent<PedestalManager>().isYellow02Active = true;
 
             }
 
