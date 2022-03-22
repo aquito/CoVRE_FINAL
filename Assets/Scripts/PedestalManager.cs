@@ -18,7 +18,11 @@ public class PedestalManager : MonoBehaviour
     private GameObject greenPedestal;
 
     [SerializeField]
-    private Transform greenPedestalSlot;
+    private Transform greenPedestalOrigin;
+
+    [SerializeField]
+    private Transform greenPedestalRaisedPos;
+
 
     [SerializeField]
     private GameObject greenTransparentPedestal;
@@ -66,11 +70,13 @@ public class PedestalManager : MonoBehaviour
         // instatiating the 'activators' ie the spheres with which to interact
         // instatiating so that they can me made into realtime components by normal (if understood correctly)
         greenPedestal = Realtime.Instantiate(greenPedestal.name);
-        greenPedestal.transform.Translate(greenPedestalSlot.position);
+        greenPedestal.transform.SetParent(greenPedestalOrigin);
+        //greenPedestal.transform.position = greenPedestalOrigin.position;
+        greenPedestal.gameObject.GetComponent<RaisePedestal>().pedestalRaisedPosition = greenPedestalRaisedPos;
 
         //greenTransparentPedestal
 
-        
+
 
     }
 
