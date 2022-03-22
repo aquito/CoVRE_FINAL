@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using Normal.Realtime;
 
 public class PedestalManager : MonoBehaviour
 {
@@ -11,16 +12,17 @@ public class PedestalManager : MonoBehaviour
     // it might be though that some of the things this currently has needs to be moved into the Puzzle2Manager 
     // and this just oversees the completion
 
+    public Realtime _realtime; // Wire this up in the Unity Editor
+
     [SerializeField]
     private GameObject greenPedestal;
 
     [SerializeField]
+    private Transform greenPedestalSlot;
+
+    [SerializeField]
     private GameObject greenTransparentPedestal;
 
-    //[SerializeField]
-    //private Material greenPedestalActiveMaterial;
-
-    //private Material greenPedestalDefaultMaterial;
 
 
     [SerializeField]
@@ -29,10 +31,7 @@ public class PedestalManager : MonoBehaviour
     [SerializeField]
     private GameObject redTransparentPedestal;
 
-    //[SerializeField]
-    //private Material redPedestalActiveMaterial;
-
-    //private Material redPedestalDefaultMaterial;
+   
 
     [SerializeField]
     private GameObject yellowPedestal;
@@ -40,30 +39,7 @@ public class PedestalManager : MonoBehaviour
     [SerializeField]
     private GameObject yellowTransparentPedestal;
 
-    // [SerializeField]
-    //private Material yellowPedestalActiveMaterial;
-
-    //private Material yellowPedestalDefaultMaterial;
-
-    /*
-    [SerializeField]
-    private GameObject pedestalActivatorGreen01;
-
-    [SerializeField]
-    private GameObject pedestalActivatorGreen02;
-
-    [SerializeField]
-    private GameObject pedestalActivatorRed01;
-
-    [SerializeField]
-    private GameObject pedestalActivatorRed02;
-    [SerializeField]
-    private GameObject pedestalActivatorYellow01;
-
-    [SerializeField]
-    private GameObject pedestalActivatorYellow02;
-
-    */
+   
 
     private XRSocketInteractor greenSocketInteractor;
     private XRSocketInteractor redSocketInteractor;
@@ -78,7 +54,25 @@ public class PedestalManager : MonoBehaviour
     public bool isYellow01Active;
     public bool isYellow02Active;
 
-   
+    private void Awake()
+    {
+
+        // Subscribe to the didConnectToRoom event
+        _realtime.didConnectToRoom += DidConnectToRoom;
+    }
+    // Start is called before the first frame update
+    private void DidConnectToRoom(Realtime realtime)
+    {
+        // instatiating the 'activators' ie the spheres with which to interact
+        // instatiating so that they can me made into realtime components by normal (if understood correctly)
+        greenPedestal = Realtime.Instantiate(greenPedestal.name);
+        greenPedestal.transform.Translate(greenPedestalSlot.position);
+
+        //greenTransparentPedestal
+
+        
+
+    }
 
     private void Start()
     {
