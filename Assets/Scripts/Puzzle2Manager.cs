@@ -83,8 +83,8 @@ public class Puzzle2Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // see 'PedestalPuzzleManager' - likely the monitoring of the individual two activators re pedestal should be here rather
-        // in that script
+        //  monitoring of the individual two activators re pedestal
+       
 
         if(green01 != null && green02 != null)
         {
@@ -122,7 +122,7 @@ public class Puzzle2Manager : MonoBehaviour
         {
             if (yellow01.GetComponent<SwitchActivatorMaterial>().isSwitchActive)
             {
-                pedestalManager.GetComponent<PedestalManager>().isYellow02Active = true;
+                pedestalManager.GetComponent<PedestalManager>().isYellow01Active = true;
 
             }
 
