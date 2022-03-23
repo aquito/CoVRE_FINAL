@@ -23,6 +23,9 @@ public class PedestalManager : MonoBehaviour
     [SerializeField]
     private Transform greenPedestalRaisedPos;
 
+    [SerializeField]
+    private Transform greenTransparentPedestalPos;
+
 
     [SerializeField]
     private GameObject greenTransparentPedestal;
@@ -43,7 +46,7 @@ public class PedestalManager : MonoBehaviour
     [SerializeField]
     private GameObject yellowTransparentPedestal;
 
-   
+    private GameObject activatedGreenPedestal;
 
     private XRSocketInteractor greenSocketInteractor;
     private XRSocketInteractor redSocketInteractor;
@@ -57,6 +60,8 @@ public class PedestalManager : MonoBehaviour
 
     public bool isYellow01Active;
     public bool isYellow02Active;
+
+    bool isGreenTransparentInstantiated = false;
 
     private void Awake()
     {
@@ -102,11 +107,16 @@ public class PedestalManager : MonoBehaviour
         // checking if one activator is being interacted with and therefore showing the transparent pedestal
         if (isGreen01Active && !isGreen02Active || isGreen02Active && !isGreen01Active)
         {
-            greenTransparentPedestal.SetActive(true);
+            if(!isGreenTransparentInstantiated)
+            activatedGreenPedestal = Realtime.Instantiate(greenTransparentPedestal.name);
+            activatedGreenPedestal.transform.SetParent(greenTransparentPedestalPos);
+            isGreenTransparentInstantiated = true;
+            //greenTransparentPedestal.SetActive(true);
         }
         else
         {
-            greenTransparentPedestal.SetActive(false);
+            if (activatedGreenPedestal != null)
+                activatedGreenPedestal.SetActive(false);
 
         }
 
