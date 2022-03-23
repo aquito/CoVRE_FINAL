@@ -7,8 +7,7 @@ public class RaisePedestal : MonoBehaviour
 
     private Transform pedestalTransform; // transform of the object
     private Vector3 pedestalYlimit; // the highest position to lift the door to on the y axis
-
-    [SerializeField]
+    
     public Transform pedestalRaisedPosition;
 
     private AudioSource audioSource;
@@ -32,7 +31,7 @@ public class RaisePedestal : MonoBehaviour
         {
             if (pedestalTransform.position.y < pedestalYlimit.y)
             {
-                pedestalTransform.Translate(0, 1f * Time.deltaTime, 0);
+                pedestalTransform.parent.Translate(0, 1f * Time.deltaTime, 0);
 
             }
             else

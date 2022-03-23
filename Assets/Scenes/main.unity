@@ -4487,6 +4487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 276079487}
+  - component: {fileID: 276079488}
   m_Layer: 0
   m_Name: YellowActivatorSlot02
   m_TagString: Untagged
@@ -4508,6 +4509,27 @@ Transform:
   m_Father: {fileID: 2144041510}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &276079488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276079486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: c424820a8880b8845bda10ec0b41507e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 1165409566}
+  _sceneViewUUID: 
+  _viewUUID: 630d06e0-42ee-4159-bc8d-238f43abae06
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 0
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components: []
+  _childViews: []
 --- !u!1 &287938930
 GameObject:
   m_ObjectHideFlags: 0
@@ -10051,6 +10073,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 473150, guid: bc7a1e843bea0834a8309a6fd31f1927, type: 3}
   m_PrefabInstance: {fileID: 732300603}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &736868038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4983517488774752874, guid: 3831e4be4122456469d8f68a1f086307, type: 3}
+  m_PrefabInstance: {fileID: 1889240799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &736868039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736868038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: c424820a8880b8845bda10ec0b41507e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 1165409566}
+  _sceneViewUUID: 
+  _viewUUID: 3683c4ab-4fcc-47f4-9505-46c6f5b37c32
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 0
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components: []
+  _childViews: []
 --- !u!1001 &740219727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10293,6 +10341,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000013336337000, guid: dd29fd6023404cb43b68ab2c63b9ca20, type: 3}
   m_PrefabInstance: {fileID: 745948789}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &759941926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4983517488977767843, guid: 3831e4be4122456469d8f68a1f086307, type: 3}
+  m_PrefabInstance: {fileID: 1889240799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &759941927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759941926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: c424820a8880b8845bda10ec0b41507e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 1165409566}
+  _sceneViewUUID: 
+  _viewUUID: 90b39069-ac9b-4799-a295-7b2789fe5fe9
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 0
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components: []
+  _childViews: []
 --- !u!1001 &777346359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10775,6 +10849,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 832746114}
+  - component: {fileID: 832746115}
   m_Layer: 0
   m_Name: RedActivatorSlot01
   m_TagString: Untagged
@@ -10796,6 +10871,27 @@ Transform:
   m_Father: {fileID: 2144041510}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &832746115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 832746113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: c424820a8880b8845bda10ec0b41507e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 1165409566}
+  _sceneViewUUID: 
+  _viewUUID: 79baa84f-2009-4188-9316-dbaa8612c99c
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 0
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components: []
+  _childViews: []
 --- !u!1001 &848899690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17271,6 +17367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1177476754}
+  - component: {fileID: 1177476755}
   m_Layer: 0
   m_Name: YellowActivatorSlot01
   m_TagString: Untagged
@@ -17292,6 +17389,27 @@ Transform:
   m_Father: {fileID: 2144041510}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1177476755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177476753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: c424820a8880b8845bda10ec0b41507e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 1165409566}
+  _sceneViewUUID: 
+  _viewUUID: 20670df7-48be-4263-a927-ea3524f94f87
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 0
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components: []
+  _childViews: []
 --- !u!4 &1178134974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
@@ -19982,6 +20100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1393355768}
+  - component: {fileID: 1393355769}
   m_Layer: 0
   m_Name: GreenPedestalOrigin
   m_TagString: Untagged
@@ -20003,6 +20122,27 @@ Transform:
   m_Father: {fileID: 514085812}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1393355769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393355767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: c424820a8880b8845bda10ec0b41507e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 1165409566}
+  _sceneViewUUID: 
+  _viewUUID: f3fccca9-3027-40f9-9d7d-c0731a5f41fe
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 0
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components: []
+  _childViews: []
 --- !u!1001 &1396546730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26547,6 +26687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1790402442}
+  - component: {fileID: 1790402443}
   m_Layer: 0
   m_Name: RedActivatorSlot02
   m_TagString: Untagged
@@ -26568,6 +26709,27 @@ Transform:
   m_Father: {fileID: 2144041510}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1790402443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790402441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: c424820a8880b8845bda10ec0b41507e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 1165409566}
+  _sceneViewUUID: 
+  _viewUUID: f34c0ec9-76fb-424e-b561-3ab75dab0687
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 0
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components: []
+  _childViews: []
 --- !u!1001 &1822529607
 PrefabInstance:
   m_ObjectHideFlags: 0
