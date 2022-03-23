@@ -1816,6 +1816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pedestalRaisedPosition: {fileID: 717399372}
+  _realtime: {fileID: 0}
 --- !u!114 &104826555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10078,7 +10079,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4983517488774752874, guid: 3831e4be4122456469d8f68a1f086307, type: 3}
   m_PrefabInstance: {fileID: 1889240799}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &736868039
+--- !u!114 &736868040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10346,7 +10347,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4983517488977767843, guid: 3831e4be4122456469d8f68a1f086307, type: 3}
   m_PrefabInstance: {fileID: 1889240799}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &759941927
+--- !u!114 &759941928
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13674,7 +13675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109337382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.46, y: 0, z: -34.63}
+  m_LocalPosition: {x: -1.57, y: 16.25, z: -25.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 500368603}
@@ -20573,6 +20574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pedestalRaisedPosition: {fileID: 2126442699}
+  _realtime: {fileID: 0}
 --- !u!114 &1420741930
 MonoBehaviour:
   m_ObjectHideFlags: 0

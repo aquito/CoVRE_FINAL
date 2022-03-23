@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Normal.Realtime;
 
 public class RaisePedestal : MonoBehaviour
 {
@@ -16,7 +17,24 @@ public class RaisePedestal : MonoBehaviour
 
     private bool isPedestalRaised;
 
-    private void Start()
+    public Realtime _realtime; // Wire this up in the Unity Editor
+
+    private void Awake()
+    {
+        var player = GameObject.Find("Realtime + VR Player");
+
+        _realtime = player.GetComponent<Realtime>();
+        // Subscribe to the didConnectToRoom event
+        _realtime.didConnectToRoom += DidConnectToRoom;
+    }
+    // Start is called before the first frame update
+    private void DidConnectToRoom(Realtime realtime)
+    {
+        pedestalYlimit = pedestalRaisedPosition.position;
+
+    }
+
+        private void Start()
     {
         pedestalTransform = GetComponent<Transform>();
         audioSource = GetComponent<AudioSource>();
