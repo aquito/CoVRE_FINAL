@@ -50,6 +50,7 @@ public class RaisePedestal : MonoBehaviour
             if (pedestalTransform.position.y < pedestalYlimit.y)
             {
                 pedestalTransform.parent.Translate(0, 1f * Time.deltaTime, 0);
+                
 
             }
             else
@@ -69,6 +70,7 @@ public class RaisePedestal : MonoBehaviour
             isPedestalGoodToMove = true;
 
             Debug.Log("Starting to move" + pedestalTransform.gameObject.name);
+            Debug.Log("Moving it from " + pedestalTransform.position.y + " to " + pedestalYlimit.y);
 
         }
 
