@@ -38,7 +38,7 @@ public class RaisePedestal : MonoBehaviour
     {
         pedestalTransform = GetComponent<Transform>();
         audioSource = GetComponent<AudioSource>();
-        pedestalYlimit = pedestalRaisedPosition.position;
+        //pedestalYlimit = pedestalRaisedPosition.position;
         isPedestalGoodToMove = false;
         isPedestalRaised = false;
     }

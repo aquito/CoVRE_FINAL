@@ -1197,7 +1197,6 @@ GameObject:
   m_Component:
   - component: {fileID: 55650661}
   - component: {fileID: 55650663}
-  - component: {fileID: 55650662}
   m_Layer: 0
   m_Name: GreenPedestalTransparentPos
   m_TagString: Untagged
@@ -1219,24 +1218,6 @@ Transform:
   m_Father: {fileID: 514085812}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &55650662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 55650660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1029778088, guid: c424820a8880b8845bda10ec0b41507e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _interpolate: 1
-  _syncPosition: 1
-  _syncRotation: 1
-  _syncScale: 1
-  _syncVelocity: 1
-  _maintainOwnershipWhileSleeping: 0
 --- !u!114 &55650663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1258,7 +1239,7 @@ MonoBehaviour:
   _sceneViewDestroyWhenLastClientLeaves: 1
   _components:
   - componentID: 1
-    component: {fileID: 55650662}
+    component: {fileID: 0}
   _childViews:
   - viewID: 1
     view: {fileID: 0}
@@ -23669,6 +23650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1608901003}
+  - component: {fileID: 1608901004}
   m_Layer: 0
   m_Name: GreenPedestalRaisedPos
   m_TagString: Untagged
@@ -23690,6 +23672,27 @@ Transform:
   m_Father: {fileID: 514085812}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1608901004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608901002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: c424820a8880b8845bda10ec0b41507e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 1165409566}
+  _sceneViewUUID: 
+  _viewUUID: 39abd3f6-4fdf-4fbb-8b05-07619bea2b42
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 0
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components: []
+  _childViews: []
 --- !u!1001 &1610073758
 PrefabInstance:
   m_ObjectHideFlags: 0
