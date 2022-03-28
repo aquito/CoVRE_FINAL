@@ -75,9 +75,11 @@ public class PedestalManager : MonoBehaviour
         // instatiating the 'activators' ie the spheres with which to interact
         // instatiating so that they can me made into realtime components by normal (if understood correctly)
         greenPedestal = Realtime.Instantiate(greenPedestal.name, Realtime.InstantiateOptions.defaults);
-        greenPedestal.transform.SetParent(greenPedestalOrigin);
+       
         //greenPedestal.transform.position = greenPedestalOrigin.position;
         greenPedestal.gameObject.GetComponent<RaisePedestal>().pedestalRaisedPosition = greenPedestalRaisedPos;
+        greenPedestal.transform.SetParent(greenPedestalRaisedPos);
+        greenPedestal.SetActive(false);
 
         //greenTransparentPedestal
 
@@ -145,7 +147,8 @@ public class PedestalManager : MonoBehaviour
 
         if (isGreen01Active && isGreen02Active)
         {
-            greenPedestal.GetComponent<RaisePedestal>().MoveUp();
+            greenPedestal.SetActive(true);
+            greenPedestal.GetComponent<RaisePedestal>().MakePedestalAppear();//.MoveUp();
            // greenPedestal.GetComponent<MeshRenderer>().material = greenPedestalActiveMaterial;
             greenSocketInteractor.socketActive = true;
         }

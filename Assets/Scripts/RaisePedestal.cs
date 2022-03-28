@@ -47,6 +47,9 @@ public class RaisePedestal : MonoBehaviour
     {
         if (isPedestalGoodToMove && !isPedestalRaised)
         {
+            
+            /*
+            // moving up from ground
             if (pedestalTransform.position.y < pedestalYlimit.y)
             {
                 pedestalTransform.parent.Translate(0, 1f * Time.deltaTime, 0);
@@ -57,7 +60,7 @@ public class RaisePedestal : MonoBehaviour
             {
                 isPedestalRaised = true;
             }
-
+            */
 
         }
     }
@@ -74,8 +77,23 @@ public class RaisePedestal : MonoBehaviour
 
         }
 
+    }
 
+    public void MakePedestalAppear()
+    {
+        if (!isPedestalGoodToMove && pedestalTransform != null)
+        {
+           
+            // pedestalTransform.gameObject.SetActive(true);
+           // pedestalTransform = GetComponent<Transform>();
+            audioSource = GetComponent<AudioSource>();
 
+           
+            audioSource.Play();
+            isPedestalGoodToMove = true;
+        }
+
+            
     }
 
 }
