@@ -64,6 +64,8 @@ public class SwitchActivatorMaterial : MonoBehaviour
             _pedestalActivatorSync.SetColor(_activeColor);
             isSwitchActive = true;
             audioSource.Play();
+
+
     }
 
     public void SwitchColorBack()

@@ -54,11 +54,11 @@ public class Puzzle2Manager : MonoBehaviour
     {
         // instatiating the 'activators' ie the spheres with which to interact
         // instatiating so that they can me made into realtime components by normal (if understood correctly)
-        green01 = Realtime.Instantiate(greenActivator.name, ownedByClient:true);
+        green01 = Realtime.Instantiate(greenActivator.name);
         green01.transform.Translate(greenActivator01Slot.position);
         green01.transform.SetParent(greenActivator01Slot);
 
-        green02 = Realtime.Instantiate(greenActivator.name, ownedByClient: true);
+        green02 = Realtime.Instantiate(greenActivator.name);
         green02.transform.Translate(greenActivator02Slot.position);
         green02.transform.SetParent(greenActivator02Slot);
 
@@ -93,11 +93,19 @@ public class Puzzle2Manager : MonoBehaviour
                 pedestalManager.GetComponent<PedestalManager>().isGreen01Active = true;
 
             }
+            else
+            {
+                //pedestalManager.GetComponent<PedestalManager>().isGreen01Active = false;
+            }
 
             if (green02.GetComponent<SwitchActivatorMaterial>().isSwitchActive)
             {
                 pedestalManager.GetComponent<PedestalManager>().isGreen02Active = true;
 
+            }
+            else
+            {
+                //pedestalManager.GetComponent<PedestalManager>().isGreen02Active = false;
             }
 
         }

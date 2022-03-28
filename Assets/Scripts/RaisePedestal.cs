@@ -25,12 +25,12 @@ public class RaisePedestal : MonoBehaviour
 
         _realtime = player.GetComponent<Realtime>();
         // Subscribe to the didConnectToRoom event
-        _realtime.didConnectToRoom += DidConnectToRoom;
+       // _realtime.didConnectToRoom += DidConnectToRoom;
     }
     // Start is called before the first frame update
     private void DidConnectToRoom(Realtime realtime)
     {
-        pedestalYlimit = pedestalRaisedPosition.position;
+       // pedestalYlimit = pedestalRaisedPosition.position;
 
     }
 
@@ -88,7 +88,8 @@ public class RaisePedestal : MonoBehaviour
            // pedestalTransform = GetComponent<Transform>();
             audioSource = GetComponent<AudioSource>();
 
-           
+            
+
             audioSource.Play();
             isPedestalGoodToMove = true;
         }
