@@ -139,8 +139,8 @@ public class PedestalManager : MonoBehaviour
             isGreenTransparentInstantiated = true;
             //greenTransparentPedestal.SetActive(true);
 
-            //RealtimeView _realtimeview = activatedGreenTransparentPedestal.GetComponent<RealtimeView>();
-            //_realtimeview.RequestOwnership();
+            RealtimeView _realtimeview = activatedGreenTransparentPedestal.GetComponent<RealtimeView>();
+            _realtimeview.RequestOwnership();
         }
         else
         {
@@ -194,7 +194,7 @@ public class PedestalManager : MonoBehaviour
         {
             if(greenPedestal != null && !isGreenPedestalInstantiated)
             {
-                greenPedestal = Realtime.Instantiate(greenPedestal.name);
+                greenPedestal = Realtime.Instantiate(greenPedestal.name, ownedByClient:false);
 
                 isGreenPedestalInstantiated = true;
                 //greenPedestal.transform.position = greenPedestalOrigin.position;
@@ -205,8 +205,8 @@ public class PedestalManager : MonoBehaviour
                 greenPedestal.SetActive(true);
 
 
-                RealtimeView _realtimeview = greenPedestal.GetComponent<RealtimeView>();
-                _realtimeview.RequestOwnership();
+                //RealtimeView _realtimeview = greenPedestal.GetComponent<RealtimeView>();
+                //_realtimeview.RequestOwnership();
 
 
                 //greenPedestal.GetComponent<RaisePedestal>().MakePedestalAppear();//.MoveUp();
