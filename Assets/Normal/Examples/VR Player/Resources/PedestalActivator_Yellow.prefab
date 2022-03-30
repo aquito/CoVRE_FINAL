@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6483232365513622285}
   - component: {fileID: 7375614724128541509}
   - component: {fileID: 6705115864714114480}
+  - component: {fileID: -220199349639251352}
   m_Layer: 0
   m_Name: PedestalActivator_Yellow
   m_TagString: Untagged
@@ -404,8 +405,6 @@ MonoBehaviour:
   _components:
   - componentID: 1
     component: {fileID: 6705115864714114480}
-  - componentID: 2
-    component: {fileID: 0}
   _childViews: []
 --- !u!114 &6705115864714114480
 MonoBehaviour:
@@ -419,3 +418,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1eb00882167174aabd9d6739a36c25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-220199349639251352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6483232365513622278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71036d5adaec2ee46b7da75ad262f14d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToFollow: {fileID: 0}

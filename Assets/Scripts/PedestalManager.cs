@@ -35,6 +35,13 @@ public class PedestalManager : MonoBehaviour
     [SerializeField]
     private GameObject redPedestal;
 
+
+    [SerializeField]
+    private Transform redPedestalRaisedPos;
+
+    [SerializeField]
+    private Transform redTransparentPedestalPos;
+
     [SerializeField]
     private GameObject redTransparentPedestal;
 
@@ -43,10 +50,19 @@ public class PedestalManager : MonoBehaviour
     [SerializeField]
     private GameObject yellowPedestal;
 
+
+    [SerializeField]
+    private Transform yellowPedestalRaisedPos;
+
+    [SerializeField]
+    private Transform yellowTransparentPedestalPos;
+
     [SerializeField]
     private GameObject yellowTransparentPedestal;
 
-    private GameObject activatedGreenPedestal;
+    private GameObject activatedGreenTransparentPedestal;
+    private GameObject activatedYellowTransparentPedestal;
+    private GameObject activatedRedTransparentPedestal;
 
     private XRSocketInteractor greenSocketInteractor;
     private XRSocketInteractor redSocketInteractor;
@@ -62,8 +78,12 @@ public class PedestalManager : MonoBehaviour
     public bool isYellow02Active;
 
     bool isGreenPedestalInstantiated = false;
+    bool isRedPedestalInstantiated = false;
+    bool isYellowPedestalInstantiated = false;
 
     bool isGreenTransparentInstantiated = false;
+    bool isRedTransparentInstantiated = false;
+    bool isYellowTransparentInstantiated = false;
 
     private void Awake()
     {
@@ -112,38 +132,58 @@ public class PedestalManager : MonoBehaviour
         if (isGreen01Active && !isGreen02Active || isGreen02Active && !isGreen01Active)
         {
             if(!isGreenTransparentInstantiated)
-            activatedGreenPedestal = Realtime.Instantiate(greenTransparentPedestal.name);
-            activatedGreenPedestal.transform.SetParent(greenTransparentPedestalPos);
+                activatedGreenTransparentPedestal = Realtime.Instantiate(greenTransparentPedestal.name);
+            //activatedGreenPedestal.transform.Translate(greenTransparentPedestalPos.localPosition);
+            // activatedGreenPedestal.transform.SetParent(greenTransparentPedestalPos);
+            activatedGreenTransparentPedestal.GetComponent<SyncPosition>().objectToFollow = greenTransparentPedestalPos;
             isGreenTransparentInstantiated = true;
-            greenTransparentPedestal.SetActive(true);
+            //greenTransparentPedestal.SetActive(true);
 
-            RealtimeView _realtimeview = activatedGreenPedestal.GetComponent<RealtimeView>();
+            RealtimeView _realtimeview = activatedGreenTransparentPedestal.GetComponent<RealtimeView>();
             _realtimeview.RequestOwnership();
         }
         else
         {
-            if (activatedGreenPedestal != null)
-                activatedGreenPedestal.SetActive(false);
+            if (activatedGreenTransparentPedestal != null)
+                activatedGreenTransparentPedestal.SetActive(false);
 
         }
 
         if (isRed01Active && !isRed02Active || isRed02Active && !isRed01Active)
         {
-           redTransparentPedestal.SetActive(true);
+            if (!isRedTransparentInstantiated)
+                activatedRedTransparentPedestal = Realtime.Instantiate(redTransparentPedestal.name);
+
+            activatedRedTransparentPedestal.GetComponent<SyncPosition>().objectToFollow = redTransparentPedestalPos;
+            isRedTransparentInstantiated = true;
+            //redTransparentPedestal.SetActive(true);
+
+            RealtimeView _realtimeview = activatedRedTransparentPedestal.GetComponent<RealtimeView>();
+            _realtimeview.RequestOwnership();
         }
         else
         {
-            redTransparentPedestal.SetActive(false);
+            if (activatedRedTransparentPedestal != null)
+                activatedRedTransparentPedestal.SetActive(false);
 
         }
 
         if (isYellow01Active && !isYellow02Active || isYellow02Active && !isYellow01Active)
         {
-            yellowTransparentPedestal.SetActive(true);
+            if (!isYellowTransparentInstantiated)
+                activatedYellowTransparentPedestal = Realtime.Instantiate(yellowTransparentPedestal.name);
+
+            activatedYellowTransparentPedestal.GetComponent<SyncPosition>().objectToFollow = yellowTransparentPedestalPos;
+            isYellowTransparentInstantiated = true;
+            //redTransparentPedestal.SetActive(true);
+
+            RealtimeView _realtimeview = activatedYellowTransparentPedestal.GetComponent<RealtimeView>();
+            _realtimeview.RequestOwnership();
         }
         else
         {
-            yellowTransparentPedestal.SetActive(false);
+            if (activatedYellowTransparentPedestal != null)
+                activatedYellowTransparentPedestal.SetActive(false);
 
         }
         // the below is monitoring the simultaneous activation of the two same-colure activators
@@ -158,8 +198,9 @@ public class PedestalManager : MonoBehaviour
 
                 isGreenPedestalInstantiated = true;
                 //greenPedestal.transform.position = greenPedestalOrigin.position;
-                greenPedestal.gameObject.GetComponent<RaisePedestal>().pedestalRaisedPosition = greenPedestalRaisedPos;
-                greenPedestal.transform.SetParent(greenPedestalRaisedPos);
+                //greenPedestal.gameObject.GetComponent<RaisePedestal>().pedestalRaisedPosition = greenPedestalRaisedPos;
+                greenPedestal.GetComponent<SyncPosition>().objectToFollow = greenPedestalRaisedPos;
+                //greenPedestal.transform.SetParent(greenPedestalRaisedPos);
 
                 greenPedestal.SetActive(true);
 
@@ -177,15 +218,48 @@ public class PedestalManager : MonoBehaviour
         }
         else if(isRed01Active && isRed02Active)
         {
-            redPedestal.GetComponent<RaisePedestal>().MoveUp();
-            //redPedestal.GetComponent<MeshRenderer>().material = redPedestalActiveMaterial;
-            redSocketInteractor.socketActive = true;
+
+            if (redPedestal != null && !isRedPedestalInstantiated)
+            {
+                redPedestal = Realtime.Instantiate(redPedestal.name);
+
+                isRedPedestalInstantiated = true;
+                //greenPedestal.transform.position = greenPedestalOrigin.position;
+                //greenPedestal.gameObject.GetComponent<RaisePedestal>().pedestalRaisedPosition = greenPedestalRaisedPos;
+                redPedestal.GetComponent<SyncPosition>().objectToFollow = redPedestalRaisedPos;
+                //greenPedestal.transform.SetParent(greenPedestalRaisedPos);
+
+                redPedestal.SetActive(true);
+
+
+                RealtimeView _realtimeview = redPedestal.GetComponent<RealtimeView>();
+                _realtimeview.RequestOwnership();
+
+
+                //greenPedestal.GetComponent<RaisePedestal>().MakePedestalAppear();//.MoveUp();
+                // greenPedestal.GetComponent<MeshRenderer>().material = greenPedestalActiveMaterial;
+                redSocketInteractor.socketActive = true;
+
+            }
         }
         else if(isYellow01Active && isYellow02Active)
         {
+            if (yellowPedestal != null && !isYellowPedestalInstantiated)
+            yellowPedestal = Realtime.Instantiate(yellowPedestal.name);
 
+            isYellowPedestalInstantiated = true;
+            //greenPedestal.transform.position = greenPedestalOrigin.position;
+            //greenPedestal.gameObject.GetComponent<RaisePedestal>().pedestalRaisedPosition = greenPedestalRaisedPos;
+            yellowPedestal.GetComponent<SyncPosition>().objectToFollow = yellowPedestalRaisedPos;
+            //greenPedestal.transform.SetParent(greenPedestalRaisedPos);
+
+            yellowPedestal.SetActive(true);
+
+
+            RealtimeView _realtimeview = yellowPedestal.GetComponent<RealtimeView>();
+            _realtimeview.RequestOwnership();
             //yellowPedestal.GetComponent<MeshRenderer>().material = yellowPedestalActiveMaterial;
-            yellowPedestal.GetComponent<RaisePedestal>().MoveUp();
+            // yellowPedestal.GetComponent<RaisePedestal>().MoveUp();
             yellowSocketInteractor.socketActive = true;
         }
 
@@ -202,6 +276,7 @@ public class PedestalManager : MonoBehaviour
         */
 
 
+        /*
         //For Debug purposes
         if (Input.GetKeyDown(KeyCode.G))
         {
@@ -219,7 +294,7 @@ public class PedestalManager : MonoBehaviour
         {
             yellowPedestal.GetComponent<RaisePedestal>().MoveUp();
         }
-
+        */
     }
 
 

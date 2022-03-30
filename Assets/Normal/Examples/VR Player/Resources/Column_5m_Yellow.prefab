@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -8824866493918561085}
   - component: {fileID: 1503609249083184096}
   m_Layer: 0
-  m_Name: Column_5m_Green
+  m_Name: Column_5m_Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dc0acbdb849a5224580c86fa8bd55d4e, type: 2}
+  - {fileID: 2100000, guid: e7ba7f9f5dcf8ce4999c730dc7029e1b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -325,6 +325,10 @@ PrefabInstance:
       propertyPath: m_SocketActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2958150670644475111, guid: 7cb740511ab9bcd4c88bfb456701ab51, type: 3}
+      propertyPath: m_InteractableHoverMeshMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ef75f73331b77f4e8081381373a4643, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cb740511ab9bcd4c88bfb456701ab51, type: 3}
 --- !u!4 &5010917587162705637 stripped
