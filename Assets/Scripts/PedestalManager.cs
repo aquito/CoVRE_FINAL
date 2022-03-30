@@ -17,8 +17,8 @@ public class PedestalManager : MonoBehaviour
     [SerializeField]
     private GameObject greenPedestal;
 
-    [SerializeField]
-    private Transform greenPedestalOrigin;
+   // [SerializeField]
+   // private Transform greenPedestalOrigin;
 
     [SerializeField]
     private Transform greenPedestalRaisedPos;
@@ -132,15 +132,15 @@ public class PedestalManager : MonoBehaviour
         if (isGreen01Active && !isGreen02Active || isGreen02Active && !isGreen01Active)
         {
             if(!isGreenTransparentInstantiated)
-                activatedGreenTransparentPedestal = Realtime.Instantiate(greenTransparentPedestal.name);
+                activatedGreenTransparentPedestal = Realtime.Instantiate(greenTransparentPedestal.name, Realtime.InstantiateOptions.defaults);
             //activatedGreenPedestal.transform.Translate(greenTransparentPedestalPos.localPosition);
             // activatedGreenPedestal.transform.SetParent(greenTransparentPedestalPos);
             activatedGreenTransparentPedestal.GetComponent<SyncPosition>().objectToFollow = greenTransparentPedestalPos;
             isGreenTransparentInstantiated = true;
             //greenTransparentPedestal.SetActive(true);
 
-            RealtimeView _realtimeview = activatedGreenTransparentPedestal.GetComponent<RealtimeView>();
-            _realtimeview.RequestOwnership();
+           // RealtimeView _realtimeview = activatedGreenTransparentPedestal.GetComponent<RealtimeView>();
+           // _realtimeview.RequestOwnership();
         }
         else
         {
@@ -152,14 +152,14 @@ public class PedestalManager : MonoBehaviour
         if (isRed01Active && !isRed02Active || isRed02Active && !isRed01Active)
         {
             if (!isRedTransparentInstantiated)
-                activatedRedTransparentPedestal = Realtime.Instantiate(redTransparentPedestal.name);
+                activatedRedTransparentPedestal = Realtime.Instantiate(redTransparentPedestal.name, Realtime.InstantiateOptions.defaults);
 
             activatedRedTransparentPedestal.GetComponent<SyncPosition>().objectToFollow = redTransparentPedestalPos;
             isRedTransparentInstantiated = true;
             //redTransparentPedestal.SetActive(true);
 
-            RealtimeView _realtimeview = activatedRedTransparentPedestal.GetComponent<RealtimeView>();
-            _realtimeview.RequestOwnership();
+           // RealtimeView _realtimeview = activatedRedTransparentPedestal.GetComponent<RealtimeView>();
+           // _realtimeview.RequestOwnership();
         }
         else
         {
@@ -171,14 +171,14 @@ public class PedestalManager : MonoBehaviour
         if (isYellow01Active && !isYellow02Active || isYellow02Active && !isYellow01Active)
         {
             if (!isYellowTransparentInstantiated)
-                activatedYellowTransparentPedestal = Realtime.Instantiate(yellowTransparentPedestal.name);
+                activatedYellowTransparentPedestal = Realtime.Instantiate(yellowTransparentPedestal.name, Realtime.InstantiateOptions.defaults);
 
             activatedYellowTransparentPedestal.GetComponent<SyncPosition>().objectToFollow = yellowTransparentPedestalPos;
             isYellowTransparentInstantiated = true;
             //redTransparentPedestal.SetActive(true);
 
-            RealtimeView _realtimeview = activatedYellowTransparentPedestal.GetComponent<RealtimeView>();
-            _realtimeview.RequestOwnership();
+           // RealtimeView _realtimeview = activatedYellowTransparentPedestal.GetComponent<RealtimeView>();
+           // _realtimeview.RequestOwnership();
         }
         else
         {
@@ -194,7 +194,9 @@ public class PedestalManager : MonoBehaviour
         {
             if(greenPedestal != null && !isGreenPedestalInstantiated)
             {
-                greenPedestal = Realtime.Instantiate(greenPedestal.name, ownedByClient:false);
+                greenPedestal = Realtime.Instantiate(greenPedestal.name, Realtime.InstantiateOptions.defaults);
+
+                Debug.Log("Instantiating green pedestal!");
 
                 isGreenPedestalInstantiated = true;
                 //greenPedestal.transform.position = greenPedestalOrigin.position;
@@ -221,7 +223,9 @@ public class PedestalManager : MonoBehaviour
 
             if (redPedestal != null && !isRedPedestalInstantiated)
             {
-                redPedestal = Realtime.Instantiate(redPedestal.name);
+                redPedestal = Realtime.Instantiate(redPedestal.name, Realtime.InstantiateOptions.defaults);
+
+                Debug.Log("Instantiating red pedestal!");
 
                 isRedPedestalInstantiated = true;
                 //greenPedestal.transform.position = greenPedestalOrigin.position;
@@ -232,8 +236,8 @@ public class PedestalManager : MonoBehaviour
                 redPedestal.SetActive(true);
 
 
-                RealtimeView _realtimeview = redPedestal.GetComponent<RealtimeView>();
-                _realtimeview.RequestOwnership();
+               // RealtimeView _realtimeview = redPedestal.GetComponent<RealtimeView>();
+               // _realtimeview.RequestOwnership();
 
 
                 //greenPedestal.GetComponent<RaisePedestal>().MakePedestalAppear();//.MoveUp();
@@ -245,7 +249,9 @@ public class PedestalManager : MonoBehaviour
         else if(isYellow01Active && isYellow02Active)
         {
             if (yellowPedestal != null && !isYellowPedestalInstantiated)
-            yellowPedestal = Realtime.Instantiate(yellowPedestal.name);
+            yellowPedestal = Realtime.Instantiate(yellowPedestal.name, Realtime.InstantiateOptions.defaults);
+
+            Debug.Log("Instantiating yellow pedestal!");
 
             isYellowPedestalInstantiated = true;
             //greenPedestal.transform.position = greenPedestalOrigin.position;
@@ -256,8 +262,9 @@ public class PedestalManager : MonoBehaviour
             yellowPedestal.SetActive(true);
 
 
-            RealtimeView _realtimeview = yellowPedestal.GetComponent<RealtimeView>();
-            _realtimeview.RequestOwnership();
+           // RealtimeView _realtimeview = yellowPedestal.GetComponent<RealtimeView>();
+           // _realtimeview.RequestOwnership();
+
             //yellowPedestal.GetComponent<MeshRenderer>().material = yellowPedestalActiveMaterial;
             // yellowPedestal.GetComponent<RaisePedestal>().MoveUp();
             yellowSocketInteractor.socketActive = true;

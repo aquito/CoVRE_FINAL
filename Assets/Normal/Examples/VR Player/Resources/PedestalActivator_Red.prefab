@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5448d032c93778e4f8c3250416252070, type: 2}
+  - {fileID: 2100000, guid: 8ea039da6c5435445ab1ca36065b5cdf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -405,8 +405,6 @@ MonoBehaviour:
   _components:
   - componentID: 1
     component: {fileID: 1705708107573770888}
-  - componentID: 2
-    component: {fileID: 0}
   _childViews: []
 --- !u!114 &1705708107573770888
 MonoBehaviour:

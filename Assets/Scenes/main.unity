@@ -3230,7 +3230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193366626}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.007, y: 14.96, z: -23.578}
+  m_LocalPosition: {x: -12.17, y: 0, z: -7.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 500368603}
@@ -4285,7 +4285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276079486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.12, y: 0, z: -3.1}
+  m_LocalPosition: {x: -11.21, y: 1.763, z: -10.112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2144041510}
@@ -5524,7 +5524,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2162012782200827608, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_Name
-      value: Anubis_statue_collectable (1)
+      value: Anubis_statue_collectable_red
       objectReference: {fileID: 0}
     - target: {fileID: 2162447634665304817, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: _realtime
@@ -5552,7 +5552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.365643
+      value: 11.09
       objectReference: {fileID: 0}
     - target: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5560,7 +5560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.3723588
+      value: -0.34
       objectReference: {fileID: 0}
     - target: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6965,7 +6965,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502320424}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.056, z: 0}
+  m_LocalPosition: {x: 0, y: -4.53, z: 0}
   m_LocalScale: {x: 0.78, y: 2.2357898, z: 0.78}
   m_Children: []
   m_Father: {fileID: 2126527723}
@@ -10398,7 +10398,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832746113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.934, y: 0, z: 1.4940001}
+  m_LocalPosition: {x: -16.534, y: 2.68, z: 1.525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2144041510}
@@ -13134,7 +13134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109337382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.57, y: 16.25, z: -25.8}
+  m_LocalPosition: {x: -11.16, y: 0, z: -35.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 500368603}
@@ -16781,7 +16781,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177476753}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8219993, y: 0, z: -4.0589995}
+  m_LocalPosition: {x: 15.6759, y: 2.789, z: -6.1718}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2144041510}
@@ -25955,7 +25955,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790402441}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.86, y: 0, z: 2.08}
+  m_LocalPosition: {x: -1.585, y: 1.496, z: -10.182}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2144041510}
@@ -26801,7 +26801,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2162012782200827608, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_Name
-      value: Anubis_statue_collectable
+      value: Anubis_statue_collectable_green
       objectReference: {fileID: 0}
     - target: {fileID: 2162447634665304817, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: _realtime
@@ -26829,7 +26829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.777542
+      value: 14.51
       objectReference: {fileID: 0}
     - target: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26837,7 +26837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.3822646
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27155,23 +27155,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4983517488774752869, guid: 3831e4be4122456469d8f68a1f086307, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.42
+      value: 3.431
+      objectReference: {fileID: 0}
+    - target: {fileID: 4983517488774752869, guid: 3831e4be4122456469d8f68a1f086307, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.572
       objectReference: {fileID: 0}
     - target: {fileID: 4983517488774752869, guid: 3831e4be4122456469d8f68a1f086307, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.92
+      value: 11.721
       objectReference: {fileID: 0}
     - target: {fileID: 4983517488977767842, guid: 3831e4be4122456469d8f68a1f086307, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4200003
+      value: 3.104
       objectReference: {fileID: 0}
     - target: {fileID: 4983517488977767842, guid: 3831e4be4122456469d8f68a1f086307, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.538
       objectReference: {fileID: 0}
     - target: {fileID: 4983517488977767842, guid: 3831e4be4122456469d8f68a1f086307, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.2890005
+      value: -10.342
       objectReference: {fileID: 0}
     - target: {fileID: 4983517489720737324, guid: 3831e4be4122456469d8f68a1f086307, type: 3}
       propertyPath: m_RootOrder
@@ -27336,7 +27340,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2162012782200827608, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_Name
-      value: Anubis_statue_collectable (2)
+      value: Anubis_statue_collectable_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 2162447634665304817, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: _realtime
@@ -27364,7 +27368,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.082308
+      value: 13.651
       objectReference: {fileID: 0}
     - target: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27372,7 +27376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.77107716
+      value: -2.09
       objectReference: {fileID: 0}
     - target: {fileID: 2165311506564418700, guid: 6e573b81020109a41953d6f61a77a0b3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30581,7 +30585,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126527722}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.7245865, y: 2.936, z: -3.1338978}
+  m_LocalPosition: {x: 14.7245865, y: 1.785387, z: -3.1338978}
   m_LocalScale: {x: 1.2820513, y: 0.44726926, z: 1.2820513}
   m_Children:
   - {fileID: 502320425}
