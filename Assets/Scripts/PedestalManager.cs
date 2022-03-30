@@ -139,8 +139,8 @@ public class PedestalManager : MonoBehaviour
             isGreenTransparentInstantiated = true;
             //greenTransparentPedestal.SetActive(true);
 
-            RealtimeView _realtimeview = activatedGreenTransparentPedestal.GetComponent<RealtimeView>();
-            _realtimeview.RequestOwnership();
+            //RealtimeView _realtimeview = activatedGreenTransparentPedestal.GetComponent<RealtimeView>();
+            //_realtimeview.RequestOwnership();
         }
         else
         {

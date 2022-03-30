@@ -64,22 +64,22 @@ public class Puzzle2Manager : MonoBehaviour
         green02.GetComponent<SyncPosition>().objectToFollow = greenActivator02Slot;
         //green02.transform.SetParent(greenActivator02Slot);
 
-        red01 = Realtime.Instantiate(redActivator.name, ownedByClient: true);
+        red01 = Realtime.Instantiate(redActivator.name);
         red01.transform.Translate(redActivator01Slot.position);
        // red01.GetComponent<SyncPosition>().objectToFollow = redActivator01Slot;
         red01.transform.SetParent(redActivator01Slot);
 
-        red02 = Realtime.Instantiate(redActivator.name, ownedByClient: true);
+        red02 = Realtime.Instantiate(redActivator.name);
         red02.transform.Translate(redActivator02Slot.position);
        // red02.GetComponent<SyncPosition>().objectToFollow = redActivator02Slot;
         red02.transform.SetParent(redActivator02Slot);
 
-        yellow01 = Realtime.Instantiate(yellowActivator.name, ownedByClient: true);
+        yellow01 = Realtime.Instantiate(yellowActivator.name);
         yellow01.transform.Translate(yellowActivator01Slot.position);
       //  yellow01.GetComponent<SyncPosition>().objectToFollow = yellowActivator01Slot;
         yellow01.transform.SetParent(yellowActivator01Slot);
 
-        yellow02 = Realtime.Instantiate(yellowActivator.name, ownedByClient: true);
+        yellow02 = Realtime.Instantiate(yellowActivator.name);
         yellow02.transform.Translate(yellowActivator02Slot.position);
        // yellow02.GetComponent<SyncPosition>().objectToFollow = yellowActivator02Slot;
         yellow02.transform.SetParent(yellowActivator02Slot);
