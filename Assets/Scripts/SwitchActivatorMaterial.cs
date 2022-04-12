@@ -72,7 +72,7 @@ public class SwitchActivatorMaterial : MonoBehaviour
     {
         if (GetComponent<MeshRenderer>().material.color != _originalColor)
             _pedestalActivatorSync.SetColor(_originalColor);
-            isSwitchActive = false;
+            //isSwitchActive = false;
             audioSource.Stop();
     }
 

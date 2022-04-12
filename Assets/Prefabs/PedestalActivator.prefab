@@ -133,6 +133,9 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 4294967295
+  m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
@@ -194,6 +197,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -379,6 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: 495371ec3d959d94fb9aba21d7c645d5, type: 2}
+  _activeColor: {r: 0, g: 0, b: 0, a: 0}
   isSwitchActive: 0
 --- !u!114 &3315360963854865487
 MonoBehaviour:
@@ -393,4 +403,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newMaterial: {fileID: 2100000, guid: bc072ca07654e0f40a09e958c7c75fbe, type: 2}
-  statueColumn: {fileID: 0}
+  statuePedestal: {fileID: 0}

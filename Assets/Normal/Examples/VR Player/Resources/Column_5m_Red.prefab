@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5482545899921318205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010917587162705636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca303d010265fd49aabad1dde7486b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 4294967295
+  m_AttachTransform: {fileID: 5010917586926360458}
+  m_KeepSelectedTargetValid: 1
+  m_StartingSelectedInteractable: {fileID: 0}
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ShowInteractableHoverMeshes: 1
+  m_InteractableHoverMeshMaterial: {fileID: 2100000, guid: f5c41f35702e66341bc5ec9fc3150827, type: 2}
+  m_InteractableCantHoverMeshMaterial: {fileID: 0}
+  m_SocketActive: 1
+  m_InteractableHoverScale: 1
+  m_RecycleDelayTime: 1
+  targetTag: RedAnubis
+  audioClip: {fileID: 8300000, guid: c5d295acc75ee244eaf05b20d9c8e0c3, type: 3}
+  isStatueInPlace: 0
 --- !u!1 &7819552021864198671
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,10 +383,21 @@ PrefabInstance:
       propertyPath: m_InteractableHoverMeshMaterial
       value: 
       objectReference: {fileID: 2100000, guid: f5c41f35702e66341bc5ec9fc3150827, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2958150670644475111, guid: 7cb740511ab9bcd4c88bfb456701ab51, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7cb740511ab9bcd4c88bfb456701ab51, type: 3}
+--- !u!1 &5010917587162705636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2958150670644475104, guid: 7cb740511ab9bcd4c88bfb456701ab51, type: 3}
+  m_PrefabInstance: {fileID: 7820268359602133508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5010917587162705637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2958150670644475105, guid: 7cb740511ab9bcd4c88bfb456701ab51, type: 3}
+  m_PrefabInstance: {fileID: 7820268359602133508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5010917586926360458 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2958150670878707086, guid: 7cb740511ab9bcd4c88bfb456701ab51, type: 3}
   m_PrefabInstance: {fileID: 7820268359602133508}
   m_PrefabAsset: {fileID: 0}

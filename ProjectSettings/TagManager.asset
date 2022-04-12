@@ -11,6 +11,9 @@ TagManager:
   - Face03
   - Face04
   - LiftFloor
+  - GreenAnubis
+  - RedAnubis
+  - YellowAnubis
   layers:
   - Default
   - TransparentFX
