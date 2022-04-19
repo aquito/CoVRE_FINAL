@@ -19,6 +19,8 @@ public class SwitchActivatorMaterial : MonoBehaviour
 
     public bool isSwitchActive;
 
+    public bool hasBeenActivatedOnce = false;
+
     private void Awake()
     {
         // Get a reference to the color sync component
@@ -60,20 +62,29 @@ public class SwitchActivatorMaterial : MonoBehaviour
 
     public void SwitchColor()
     {
-        if(GetComponent<MeshRenderer>().material.color != _activeColor)
-            _pedestalActivatorSync.SetColor(_activeColor);
+        if (!hasBeenActivatedOnce)
+        {
+
+            if (GetComponent<MeshRenderer>().material.color != _activeColor)
+                _pedestalActivatorSync.SetColor(_activeColor);
             isSwitchActive = true;
             audioSource.Play();
+            hasBeenActivatedOnce = true;
 
-
+        }
     }
 
     public void SwitchColorBack()
     {
-        if (GetComponent<MeshRenderer>().material.color != _originalColor)
-            _pedestalActivatorSync.SetColor(_originalColor);
+        if(!hasBeenActivatedOnce)
+        {
+            if (GetComponent<MeshRenderer>().material.color != _originalColor)
+                _pedestalActivatorSync.SetColor(_originalColor);
             //isSwitchActive = false;
             audioSource.Stop();
+            hasBeenActivatedOnce = true;
+        }
+        
     }
 
 }

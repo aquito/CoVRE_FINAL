@@ -68,14 +68,14 @@ public class PedestalManager : MonoBehaviour
     private XRSocketInteractor redSocketInteractor;
     private XRSocketInteractor yellowSocketInteractor;
 
-    public bool isGreen01Active;
-    public bool isGreen02Active;
+    public bool isGreen01Active = false;
+    public bool isGreen02Active = false;
 
-    public bool isRed01Active;
-    public bool isRed02Active;
+    public bool isRed01Active = false;
+    public bool isRed02Active = false;
 
-    public bool isYellow01Active;
-    public bool isYellow02Active;
+    public bool isYellow01Active = false;
+    public bool isYellow02Active = false;
 
     bool isGreenPedestalInstantiated = false;
     bool isRedPedestalInstantiated = false;
@@ -132,7 +132,7 @@ public class PedestalManager : MonoBehaviour
     private void Update()
     {
         // checking if one activator is being interacted with and therefore showing the transparent pedestal
-        if (isGreen01Active && !isGreen02Active || isGreen02Active && !isGreen01Active)
+        if (isGreen01Active || isGreen02Active) // || isGreen02Active && !isGreen01Active)
         {
             if(!isGreenTransparentInstantiated)
                 activatedGreenTransparentPedestal = Realtime.Instantiate(greenTransparentPedestal.name, new Realtime.InstantiateOptions
@@ -154,14 +154,14 @@ public class PedestalManager : MonoBehaviour
            // RealtimeView _realtimeview = activatedGreenTransparentPedestal.GetComponent<RealtimeView>();
            // _realtimeview.RequestOwnership();
         }
-        else
-        {
-            if (activatedGreenTransparentPedestal != null)
-                activatedGreenTransparentPedestal.SetActive(false);
+       // else
+       // {
+        //    if (activatedGreenTransparentPedestal != null)
+       //         activatedGreenTransparentPedestal.SetActive(false);
 
-        }
+       // }
 
-        if (isRed01Active && !isRed02Active || isRed02Active && !isRed01Active)
+        if (isRed01Active || isRed02Active) // || isRed02Active && !isRed01Active)
         {
             if (!isRedTransparentInstantiated)
                 activatedRedTransparentPedestal = Realtime.Instantiate(redTransparentPedestal.name, new Realtime.InstantiateOptions
@@ -180,16 +180,19 @@ public class PedestalManager : MonoBehaviour
            // RealtimeView _realtimeview = activatedRedTransparentPedestal.GetComponent<RealtimeView>();
            // _realtimeview.RequestOwnership();
         }
-        else
-        {
-            if (activatedRedTransparentPedestal != null)
-                activatedRedTransparentPedestal.SetActive(false);
+       // else
+       // {
+        //    if (activatedRedTransparentPedestal != null)
+        //        activatedRedTransparentPedestal.SetActive(false);
 
-        }
+       // }
 
-        if (isYellow01Active && !isYellow02Active || isYellow02Active && !isYellow01Active)
+        if (isYellow01Active || isYellow02Active) // || isYellow02Active && !isYellow01Active)
         {
             if (!isYellowTransparentInstantiated)
+            {
+
+           
                 activatedYellowTransparentPedestal = Realtime.Instantiate(yellowTransparentPedestal.name, new Realtime.InstantiateOptions
                 {
                     ownedByClient = true,
@@ -201,22 +204,23 @@ public class PedestalManager : MonoBehaviour
 
             activatedYellowTransparentPedestal.GetComponent<SyncPosition>().objectToFollow = yellowTransparentPedestalPos;
             isYellowTransparentInstantiated = true;
-            //redTransparentPedestal.SetActive(true);
+                //redTransparentPedestal.SetActive(true);
+            }
 
-           // RealtimeView _realtimeview = activatedYellowTransparentPedestal.GetComponent<RealtimeView>();
-           // _realtimeview.RequestOwnership();
+            // RealtimeView _realtimeview = activatedYellowTransparentPedestal.GetComponent<RealtimeView>();
+            // _realtimeview.RequestOwnership();
         }
-        else
-        {
-            if (activatedYellowTransparentPedestal != null)
-                activatedYellowTransparentPedestal.SetActive(false);
+       // else
+        //{
+        //    if (activatedYellowTransparentPedestal != null)
+         //       activatedYellowTransparentPedestal.SetActive(false);
 
-        }
+        //}
         // the below is monitoring the simultaneous activation of the two same-colure activators
         // ie if they are both true they give the hint of which pedestal relates to which statue color
         // (which statue should be brought onto which pedestal)
 
-        if (isGreen01Active && isGreen02Active)
+        if (isGreen01Active && isGreen02Active && isGreenTransparentInstantiated)
         {
             if(greenPedestal != null && !isGreenPedestalInstantiated)
             {
@@ -252,7 +256,8 @@ public class PedestalManager : MonoBehaviour
             }
             
         }
-        else if(isRed01Active && isRed02Active)
+        
+        if(isRed01Active && isRed02Active && isRedTransparentInstantiated)
         {
 
             if (redPedestal != null && !isRedPedestalInstantiated)
@@ -290,7 +295,8 @@ public class PedestalManager : MonoBehaviour
 
             }
         }
-        else if(isYellow01Active && isYellow02Active)
+        
+        if (isYellow01Active && isYellow02Active && isYellowTransparentInstantiated)
         {
             if (yellowPedestal != null && !isYellowPedestalInstantiated)
             {
