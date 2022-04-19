@@ -18,6 +18,10 @@ public class StatueCompletionManager : MonoBehaviour
     public SocketWithTagCheck redSocket;
     public SocketWithTagCheck yellowSocket;
 
+    public Transform greenAnubisEndPlace;
+    public Transform redAnubisEndPlace;
+    public Transform yellowAnubisEndPlace;
+
     private AudioSource audioSource;
     public AudioClip audioClip;
 
@@ -26,6 +30,8 @@ public class StatueCompletionManager : MonoBehaviour
     public GameObject door;
 
     public GameObject spotLight;
+
+    //private Quaternion resetRotation = new Quaternion(0);
 
     private void Start()
     {
@@ -45,7 +51,8 @@ public class StatueCompletionManager : MonoBehaviour
         {
 
             greenAnubis.GetComponent<XRGrabInteractable>().enabled = false;
-            // greenSocket.socketActive = false;
+            greenAnubis.transform.position = greenAnubisEndPlace.position;
+           // greenAnubis.transform.rotation = resetRotation;
         }
 
         if (redSocket != null)
@@ -57,7 +64,7 @@ public class StatueCompletionManager : MonoBehaviour
         if (isRedAnubisInPlace)
         {
             redAnubis.GetComponent<XRGrabInteractable>().enabled = false;
-            // redSocket.socketActive = false;
+            redAnubis.transform.position = redAnubisEndPlace.position;
         }
 
         if (yellowSocket != null)
@@ -69,7 +76,7 @@ public class StatueCompletionManager : MonoBehaviour
         if (isYellowAnubisInPlace)
         {
             yellowAnubis.GetComponent<XRGrabInteractable>().enabled = false;
-            // yellowSocket.socketActive = false;
+            yellowAnubis.transform.position = yellowAnubisEndPlace.position;
         }
 
         if (isGreenAnubisInPlace && isRedAnubisInPlace && isYellowAnubisInPlace)
