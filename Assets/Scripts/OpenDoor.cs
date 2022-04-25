@@ -13,12 +13,15 @@ public class OpenDoor : MonoBehaviour
 
     private AudioSource audioSource;
 
+    private AudioClip audioClip;
+
     private bool isDoorGoodToMove;
 
     private void Start()
     {
         doorTransform = GetComponent<Transform>();
         audioSource = GetComponent<AudioSource>();
+        audioClip = audioSource.clip;
         doorYlimit = doorOpenPosition.transform.position;
         isDoorGoodToMove = false;
     }
@@ -37,7 +40,7 @@ public class OpenDoor : MonoBehaviour
     public void MoveDoorUp()
     {
         isDoorGoodToMove = true;
-        audioSource.Play();
+        audioSource.PlayOneShot(audioClip);
 
         Debug.Log("Starting to move" + doorTransform.gameObject.name + " door");
     }
