@@ -10633,6 +10633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_10x5m (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011660665384, guid: ddccf1e3a197d634499e7bd1f946abc0, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011302327978, guid: ddccf1e3a197d634499e7bd1f946abc0, type: 3}
       propertyPath: m_RootOrder
       value: 35
