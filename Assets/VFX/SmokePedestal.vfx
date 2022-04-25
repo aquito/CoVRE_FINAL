@@ -4551,9 +4551,9 @@ MonoBehaviour:
   - {fileID: 8926484042661614921}
   - {fileID: 8926484042661614902}
   dataType: 1
-  capacity: 10000
+  capacity: 5000
   stripCapacity: 10
-  particlePerStripCount: 1000
+  particlePerStripCount: 500
   m_Space: 0
 --- !u!114 &8926484042661614876
 MonoBehaviour:
